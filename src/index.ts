@@ -19,7 +19,7 @@ export function imageToSvg(imageData: ImageData, options: SVGOptions = {}) {
     }
   
     Object.entries(style).forEach(([prop, value]) => {
-      svg.style[prop] = value;
+      svg.style[prop as any] = value;
     });
   
     if (backgroundColor !== 'transparent') {
